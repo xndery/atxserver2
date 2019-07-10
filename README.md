@@ -6,7 +6,7 @@
 ![img](static/favicon-dark.png)
 
 ## 部署方案1 （docker-compose方式）
-代码Clone到本地
+代码Clone到local
 
 接下来切换到代码目录，只需要再执行一条命令即可。
 
