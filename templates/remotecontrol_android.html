@@ -1322,6 +1322,7 @@
             return "http://" + this.address + "/screenshot/0"
           },
           remoteConnectAddr() {
+            console.log("zxy adb connect :", this.source.remoteConnectAddress)
             return "adb connect " + this.source.remoteConnectAddress
           },
           whatsInputUrl() {

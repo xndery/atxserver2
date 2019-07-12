@@ -267,7 +267,7 @@ class AndroidDeviceControlHandler(AuthRequestHandler):
     def render_remotecontrol(self, device: dict):
         platform = device['platform']
         udid = device['udid']
-        if platform == 'android':
+        if platform == 'android' or platform == 'wifi':
             self.render("remotecontrol_android.html", udid=udid)
         elif platform == 'apple':
             self.render("remotecontrol_apple.html", udid=udid)

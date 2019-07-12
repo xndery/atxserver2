@@ -264,7 +264,7 @@ readers do not read off random characters that represent icons */
 
 .fa-android:before {
   content: "\f17b"; }
-
+  
 .fa-angellist:before {
   content: "\f209"; }
 

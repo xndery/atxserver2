@@ -96,6 +96,7 @@ class ProviderHeartbeatWSHandler(BaseWebSocketHandler):
         }
         """
         updates = req.copy()
+        logger.info("ws updates: %s", updates)
         udid = updates['udid']
         assert isinstance(udid, str)
 

@@ -51,6 +51,8 @@ class="container-fluid"
                         </el-checkbox>
                         <el-checkbox size="mini" v-model="filters.platform.apple">
                             <i class="fab fa-apple"></i> 苹果 <small>{{!counts.apple}}</el-checkbox>
+                        <el-checkbox size="mini" v-model="filters.platform.some">
+                            <i class="fa fa-wifi"></i> 未知 <small>{{!counts.some}}</el-checkbox>
                     </div>
                 </div>
             </div>
@@ -175,12 +177,14 @@ class="container-fluid"
                     counts: {
                         android: 0,
                         apple: 0,
+                        some: 0,
                     },
                     filters: {
                         private: false,
                         platform: {
                             apple: false,
                             android: false,
+                            some: false,
                         }
                     }
                 }, { "devices": ret.devices }),
@@ -213,12 +217,15 @@ class="container-fluid"
 
                         this.counts.android = 0
                         this.counts.apple = 0
+                        this.counts.some = 0
                         devices.forEach(d => {
                             if (d.present) {
                                 if (d.platform == "android") {
                                     this.counts.android++
                                 } else if (d.platform == "apple") {
                                     this.counts.apple++
+                                } else if (d.platform == "wifi") {
+                                    this.counts.some++
                                 }
                             }
                         })
